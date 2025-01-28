@@ -5,9 +5,11 @@ const produits = [
     { id: 4, nom: "Café Robusta", prix: 9.99 },
 ];
 
-const affichageProduit = document.getElementById("table")
+const affichageProduit = document.getElementById("table");
 const rechercheProduit = document.getElementById("product_search");
 const prixTotal = document.getElementById("price");
+
+
 // Fonction supprimer un article
 const supprimerProduit = () => {
 
@@ -21,11 +23,23 @@ const affichage = () => {
                 <td>${produit.prix}€</td>
                 <td><button onclick="supprimerProduit(${produit.id})">Supprimer</button></td>
             </tr>`
-
-
     )
-
 affichageProduit.innerHTML = produitHTML;
 };
 affichage()
+
+// filtrage
+
+// Compteur
+/*let total = document.querySelectorAll(".prix");
+total.reduce((acc, valC) => acc + valC);
+console.log(total)*/
+
+/*let total = produits.prix.reduce((a, b) => a + b, 2);
+console.log(total)*/
+
+
+
+
+
 
